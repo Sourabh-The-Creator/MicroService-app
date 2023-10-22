@@ -1,0 +1,1 @@
+This is simple microservice app with two serivices product and order which can communicate with each other
