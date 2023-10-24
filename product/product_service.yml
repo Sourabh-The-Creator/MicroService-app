@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+  labels:
+    name: product-service
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    name: product-service-pod

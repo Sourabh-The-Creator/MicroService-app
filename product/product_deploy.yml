@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service-deploy
+  labels:
+    app: product-service-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: product-service-pod
+  template:
+    metadata:
+      name: product-service-pod
+      labels:
+        name: product-service-pod
+    spec:
+      containers:
+        - name: product-service
+          image: sourabhmiraje/product-service:v2
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: servers-configmap

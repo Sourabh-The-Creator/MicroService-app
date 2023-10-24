@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service-deploy
+  labels:
+    name: order-service-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: order-service-pod
+  template:
+    metadata:
+      name: order-service-pod
+      labels:
+        name: order-service-pod
+    spec:
+      containers:
+        - name: order-service
+          resources:
+          image: sourabhmiraje/order-service:v3
+          ports:
+            - containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: servers-configmap

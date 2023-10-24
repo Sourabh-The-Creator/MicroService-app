@@ -1,0 +1,2 @@
+terraform-eks-cluster-setup/.terraform*
+terraform-eks-cluster-setup/terraform.tfstate.*
