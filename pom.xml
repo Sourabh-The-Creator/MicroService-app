@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.sourabh.microservice</groupId>
 	<artifactId>product</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>product</name>
 	<description>Product service project for Spring Boot</description>
 	<properties>
